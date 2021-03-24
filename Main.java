@@ -42,6 +42,20 @@ public class Main {
         raptor.addAccountants(a2);
         raptor.addAccountants(a3);
 
+        Administrator ad = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE", "MSc in CSE",
+                460.3, "day", 12);
+        Administrator ad2 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+                "MSc in CSE", 460.3, "day", 12);
+        Administrator ad3 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+                "MSc in CSE", 460.3, "night", 12);
+        Administrator ad4 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+                "MSc in CSE", 460.3, "night", 12);
+
+        raptor.addAdministrators(ad);
+        raptor.addAdministrators(ad2);
+        raptor.addAdministrators(ad3);
+        raptor.addAdministrators(ad4);
+
         Scanner input = new Scanner(System.in);
 
         while (true) {

@@ -37,7 +37,26 @@ public class SuperShop {
     }
 
     public void printAllAdministrators() {
-        // f
+        try {
+
+            for (int i = 0; i < getWorkers().size(); i++) {
+                System.out.println("\n------------------------------------");
+                System.out.println("            Administrators Details             ");
+                System.out.println("--------------------------------------\n");
+                System.out.println("Name: " + getAdministrators().get(i).getName());
+                System.out.println("ID: " + getAdministrators().get(i).getId());
+                System.out.println("Age: " + getAdministrators().get(i).getAge());
+                System.out.println("Gender: " + getAdministrators().get(i).getGender());
+                System.out.println("Qualifications: " + getAdministrators().get(i).getQualification());
+                System.out.println("Department: " + getAdministrators().get(i).getDepartment());
+                System.out.println("Phone Number" + getAdministrators().get(i).getPhoneNumber());
+                System.out.println("Salary: $" + getAdministrators().get(i).getSalary());
+                System.out.println("Work Hour: " + getAdministrators().get(i).getWorkHour());
+
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void printAllWorkers() {
