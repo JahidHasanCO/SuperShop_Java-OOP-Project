@@ -8,14 +8,16 @@ public class SuperShop {
     private String contract;
 
     private List<Administrator> administrators;
+    private List<Accountant> accountants;
     private List<Worker> workers;
 
     public SuperShop(String shopName, String shopPlace, String contract) {
         this.shopName = shopName;
         this.shopPlace = shopPlace;
         this.contract = contract;
-        this.administrators = new ArrayList<>();
-        this.workers = new ArrayList<>();
+        administrators = new ArrayList<>();
+        workers = new ArrayList<>();
+        accountants = new ArrayList<>();
     }
 
     public List<Administrator> getAdministrators() {
@@ -34,6 +36,10 @@ public class SuperShop {
         workers.add(worker);
     }
 
+    public void printAllAdministrators() {
+        // f
+    }
+
     public void printAllWorkers() {
 
         try {
@@ -47,10 +53,41 @@ public class SuperShop {
                 System.out.println("Age: " + getWorkers().get(i).getAge());
                 System.out.println("Gender: " + getWorkers().get(i).getGender());
                 System.out.println("Phone Number" + getWorkers().get(i).getPhoneNumber());
-                System.out.println("Salary: " + getWorkers().get(i).getSalary());
+                System.out.println("Salary: $" + getWorkers().get(i).getSalary());
                 System.out.println("Work Hour: " + getWorkers().get(i).getWorkHour());
                 System.out.println("Shift: " + getWorkers().get(i).getDutyShift());
                 System.out.println("DressCode: " + getWorkers().get(i).getDressCode());
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public List<Accountant> getAccountants() {
+        return accountants;
+    }
+
+    public void addAccountants(Accountant accountant) {
+        accountants.add(accountant);
+    }
+
+    public void printAllAccountants() {
+        try {
+
+            for (int i = 0; i < getWorkers().size(); i++) {
+                System.out.println("\n-------------------------------------");
+                System.out.println("            Accountants Details             ");
+                System.out.println("-------------------------------------\n");
+                System.out.println("Name: " + getAccountants().get(i).getName());
+                System.out.println("ID: " + getAccountants().get(i).getId());
+                System.out.println("Age: " + getAccountants().get(i).getAge());
+                System.out.println("Gender: " + getAccountants().get(i).getGender());
+                System.out.println("Qualifications: " + getAccountants().get(i).getQualification());
+                System.out.println("Department: " + getAccountants().get(i).getDepartment());
+                System.out.println("Phone Number" + getAccountants().get(i).getPhoneNumber());
+                System.out.println("Salary: $" + getAccountants().get(i).getSalary());
+                System.out.println("Work Hour: " + getAccountants().get(i).getWorkHour());
+
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

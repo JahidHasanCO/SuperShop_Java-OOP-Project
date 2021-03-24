@@ -6,19 +6,23 @@ import javax.sound.midi.VoiceStatus;
 
 public class Main {
 
+    /**
+     *
+     */
+    private static final String COMMERCE = "commerce";
     private static final String FORMAL = "Formal";
-    private static Void printAllWorkers;
+    private static final String BSCCO = "BSc in finance and economic";
 
     public static void main(String[] args) {
 
         SuperShop raptor = new SuperShop("Raptor", "khagan, Ashulia, Savar", "01773393608");
 
         Worker w = new Worker("Jahid Hasan", 20, "Male", 201, FORMAL, "010000000", 200.30, "day", 8);
-        Worker w1 = new Worker("Hasib", 20, "Male", 201, FORMAL, "0100000001", 200.30, "day", 8);
-        Worker w2 = new Worker("nirob", 20, "Male", 201, FORMAL, "0100000002", 200.30, "day", 8);
-        Worker w3 = new Worker("payel", 20, "Female", 201, FORMAL, "0100000003", 200.30, "day", 8);
-        Worker w4 = new Worker("likhn", 20, "Male", 201, FORMAL, "0100000004", 200.30, "day", 8);
-        Worker w5 = new Worker("badol", 20, "Male", 201, FORMAL, "0100000005", 200.30, "day", 8);
+        Worker w1 = new Worker("Hasib", 20, "Male", 202, FORMAL, "0100000001", 200.30, "day", 8);
+        Worker w2 = new Worker("nirob", 20, "Male", 203, FORMAL, "0100000002", 200.30, "day", 8);
+        Worker w3 = new Worker("payel", 20, "Female", 204, FORMAL, "0100000003", 200.30, "day", 8);
+        Worker w4 = new Worker("likhn", 20, "Male", 205, FORMAL, "0100000004", 200.30, "day", 8);
+        Worker w5 = new Worker("badol", 20, "Male", 206, FORMAL, "0100000005", 200.30, "day", 8);
 
         raptor.addWorkers(w);
         raptor.addWorkers(w1);
@@ -26,6 +30,17 @@ public class Main {
         raptor.addWorkers(w3);
         raptor.addWorkers(w4);
         raptor.addWorkers(w5);
+
+        Accountant a = new Accountant("Sajib", 30, "Male", 301, FORMAL, "01349384038", COMMERCE, BSCCO, 400.20, "day",
+                8);
+        Accountant a2 = new Accountant("Halim", 30, "Male", 302, FORMAL, "0134938403", COMMERCE, BSCCO, 400.20, "day",
+                8);
+        Accountant a3 = new Accountant("rafa", 30, "Male", 303, FORMAL, "0134938408", COMMERCE, BSCCO, 400.20, "day",
+                8);
+
+        raptor.addAccountants(a);
+        raptor.addAccountants(a2);
+        raptor.addAccountants(a3);
 
         Scanner input = new Scanner(System.in);
 
@@ -49,7 +64,39 @@ public class Main {
 
             switch (option) {
             case 2:
-                raptor.printAllWorkers();
+                System.out.println("\nSelect your Option: ");
+                System.out.println("-----------------------");
+                System.out.println("1. Print Owners");
+                System.out.println("2. Print Accountants");
+                System.out.println("3. Print Administrators");
+                System.out.println("4. Print Workers");
+                System.out.println("5. Modify");
+                System.out.println("6. back");
+                System.out.print("\nEnter Option: ");
+                int option2 = input.nextInt();
+                if (option2 == 6) {
+
+                    break;
+                }
+                switch (option2) {
+                case 1:
+
+                    break;
+                case 2:
+                    raptor.printAllAccountants();
+                    break;
+                case 3:
+                    raptor.printAllAdministrators();
+
+                    break;
+                case 4:
+                    raptor.printAllWorkers();
+                    break;
+
+                default:
+                    break;
+                }
+
                 break;
 
             default:
