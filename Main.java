@@ -7,7 +7,7 @@ import javax.sound.midi.VoiceStatus;
 public class Main {
 
     /**
-     *
+     * I created those Constant.
      */
     private static final String COMMERCE = "commerce";
     private static final String FORMAL = "Formal";
@@ -121,6 +121,11 @@ public class Main {
                 }
 
                 break;
+            /**
+             * Start Search Section in this section i write some search algo for search
+             * people
+             * 
+             */
             case 3:
                 System.out.println("\nSelect your Option: ");
                 System.out.println("-----------------------");
@@ -138,10 +143,14 @@ public class Main {
                 switch (option3) {
                 case 1:
                     System.out.print("Enter Name: ");
-                    int oName = input.nextInt();
+                    String oName = input.next();
                     raptor.searchOwners(oName);
                     break;
-
+                case 2:
+                    System.out.print("Enter Name: ");
+                    String aName = input.next();
+                    raptor.searchAccountant(aName);
+                    break;
                 default:
                     break;
                 }

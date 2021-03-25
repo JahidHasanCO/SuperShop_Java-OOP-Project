@@ -97,6 +97,25 @@ public class SuperShop {
         }
     }
 
+    public void searchAccountant(String Name) {
+        try {
+
+            for (int i = 0; i < getAccountants().size(); i++) {
+                if (getAccountants().get(i).getName().toString().trim().equalsIgnoreCase(Name)) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          Find Accountant Details            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getAccountants().get(i).displayAccountant();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
+    }
+
     public List<Owner> getOwners() {
         return owners;
     }
@@ -119,11 +138,11 @@ public class SuperShop {
         }
     }
 
-    public void searchOwners(int Name) {
+    public void searchOwners(String Name) {
         try {
 
             for (int i = 0; i < getOwners().size(); i++) {
-                if (getOwners().get(i).getAge() == Name) {
+                if (getOwners().get(i).getName().toString().trim().equalsIgnoreCase(Name)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Find Owner Details            ");
@@ -133,7 +152,7 @@ public class SuperShop {
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage().toString());
         }
 
     }
@@ -144,6 +163,42 @@ public class SuperShop {
 
     public void addProduct(Product product) {
         products.add(product);
+    }
+
+    public void printAllProducts() {
+        try {
+
+            for (int i = 0; i < getProducts().size(); i++) {
+                System.out.println("\n-------------------------------------");
+                System.out.println("          Product Details            ");
+                System.out.println("-------------------------------------\n");
+
+                getProducts().get(i).displayItem();
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+    }
+
+    public void printProductsByCategory(String Category) {
+        try {
+
+            for (int i = 0; i < getProducts().size(); i++) {
+
+                if (getProducts().get(i).getCategory().toString().trim().equalsIgnoreCase(Category)) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          Product Details            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getProducts().get(i).displayItem();
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
     }
 
 }
