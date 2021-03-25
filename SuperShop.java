@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import ModelClass.Product;
+
 public class SuperShop {
 
     private String shopName;
@@ -12,6 +14,8 @@ public class SuperShop {
     private List<Accountant> accountants;
     private List<Worker> workers;
 
+    private List<Product> products;
+
     public SuperShop(String shopName, String shopPlace, String contract) {
         this.shopName = shopName;
         this.shopPlace = shopPlace;
@@ -20,6 +24,7 @@ public class SuperShop {
         workers = new ArrayList<>();
         accountants = new ArrayList<>();
         owners = new ArrayList<>();
+        products = new ArrayList<>();
     }
 
     public List<Administrator> getAdministrators() {
@@ -131,6 +136,14 @@ public class SuperShop {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
     }
 
 }

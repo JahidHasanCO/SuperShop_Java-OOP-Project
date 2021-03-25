@@ -93,10 +93,11 @@ public class Main {
                 System.out.println("3. Print Administrators");
                 System.out.println("4. Print Workers");
                 System.out.println("5. Modify");
-                System.out.println("6. back");
+                System.out.println("6 Product Management");
+                System.out.println("7. back");
                 System.out.print("\nEnter Option: ");
                 int option2 = input.nextInt();
-                if (option2 == 6) {
+                if (option2 == 7) {
 
                     break;
                 }
@@ -144,6 +145,8 @@ public class Main {
                 default:
                     break;
                 }
+                break;
+            case 6:
                 break;
             default:
                 System.out.println("You need to choose Right option");
