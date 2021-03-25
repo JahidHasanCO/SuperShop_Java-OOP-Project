@@ -46,7 +46,7 @@ public class SuperShop {
     public void printAllAdministrators() {
         try {
 
-            for (int i = 0; i < getWorkers().size(); i++) {
+            for (int i = 0; i < getAdministrators().size(); i++) {
                 System.out.println("\n------------------------------------");
                 System.out.println("            Administrators Details             ");
                 System.out.println("--------------------------------------\n");
@@ -56,6 +56,25 @@ public class SuperShop {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void searchAdmintrator(int ID) {
+        try {
+
+            for (int i = 0; i < getAdministrators().size(); i++) {
+                if (getAdministrators().get(i).getId() == ID) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("        Find Admintrator Details         ");
+                    System.out.println("-------------------------------------\n");
+
+                    getAdministrators().get(i).displayAdministrator();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
     }
 
     public void printAllWorkers() {
@@ -74,6 +93,25 @@ public class SuperShop {
         }
     }
 
+    public void searchWorkers(int ID) {
+        try {
+
+            for (int i = 0; i < getWorkers().size(); i++) {
+                if (getWorkers().get(i).getId() == ID) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          Find Workers Details            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getWorkers().get(i).displayWorkers();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
+    }
+
     public List<Accountant> getAccountants() {
         return accountants;
     }
@@ -85,7 +123,7 @@ public class SuperShop {
     public void printAllAccountants() {
         try {
 
-            for (int i = 0; i < getWorkers().size(); i++) {
+            for (int i = 0; i < getAccountants().size(); i++) {
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Accountants Details             ");
                 System.out.println("-------------------------------------\n");
@@ -97,11 +135,11 @@ public class SuperShop {
         }
     }
 
-    public void searchAccountant(String Name) {
+    public void searchAccountant(int ID) {
         try {
 
             for (int i = 0; i < getAccountants().size(); i++) {
-                if (getAccountants().get(i).getName().toString().trim().equalsIgnoreCase(Name)) {
+                if (getAccountants().get(i).getId() == ID) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Find Accountant Details            ");
@@ -126,7 +164,7 @@ public class SuperShop {
 
     public void printAllOwners() {
         try {
-            for (int i = 0; i < owners.size(); i++) {
+            for (int i = 0; i < getOwners().size(); i++) {
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Owners Details             ");
                 System.out.println("-------------------------------------\n");

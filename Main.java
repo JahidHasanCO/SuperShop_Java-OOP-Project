@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.sound.midi.VoiceStatus;
-
 public class Main {
 
     /**
@@ -52,11 +50,11 @@ public class Main {
 
         Administrator ad = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE", "MSc in CSE",
                 460.3, "day", 12);
-        Administrator ad2 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+        Administrator ad2 = new Administrator("Jahid Hasan", 35, "male", 102, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "day", 12);
-        Administrator ad3 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+        Administrator ad3 = new Administrator("Jahid Hasan", 35, "male", 103, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12);
-        Administrator ad4 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
+        Administrator ad4 = new Administrator("Jahid Hasan", 35, "male", 104, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12);
 
         raptor.addAdministrator(ad);
@@ -85,6 +83,46 @@ public class Main {
             }
 
             switch (option) {
+            /**
+             * this is add section
+             */
+            case 1:
+                System.out.println("\nSelect your Option: ");
+                System.out.println("-----------------------");
+                System.out.println("1. Add Accountants");
+                System.out.println("2. Add Administrators");
+                System.out.println("3. Add Workers");
+                System.out.println("4. back");
+                System.out.print("\nEnter Option: ");
+                int option1 = input.nextInt();
+                if (option1 == 4) {
+
+                    break;
+                }
+                switch (option1) {
+
+                /**
+                 * (String name, int age, String gender, int id, String dressCode, String
+                 * phoneNumber, String department, String qualification, double salary, String
+                 * dayShift, int workHour)
+                 */
+                case 2:
+                    System.out.println("Add New Accountant");
+                    System.out.println("-------------------");
+
+                    String aNameIN = input.next();
+                    break;
+
+                default:
+                    System.out.println("You need to choose Right option");
+                    break;
+                }
+
+                break;
+            /**
+             * this is print section
+             * 
+             */
             case 2:
                 System.out.println("\nSelect your Option: ");
                 System.out.println("-----------------------");
@@ -92,31 +130,46 @@ public class Main {
                 System.out.println("2. Print Accountants");
                 System.out.println("3. Print Administrators");
                 System.out.println("4. Print Workers");
-                System.out.println("5. Modify");
-                System.out.println("6 Product Management");
-                System.out.println("7. back");
+                System.out.println("5. back");
                 System.out.print("\nEnter Option: ");
                 int option2 = input.nextInt();
-                if (option2 == 7) {
+                if (option2 == 5) {
 
                     break;
                 }
                 switch (option2) {
+                /**
+                 * this case print all owner list
+                 */
                 case 1:
                     raptor.printAllOwners();
                     break;
+                /**
+                 * this case print all accountants list
+                 */
                 case 2:
                     raptor.printAllAccountants();
                     break;
+                /**
+                 * this case print all Administraor list
+                 */
                 case 3:
                     raptor.printAllAdministrators();
 
                     break;
+                /**
+                 * this case print all worker list
+                 */
                 case 4:
                     raptor.printAllWorkers();
                     break;
 
+                /**
+                 * if user enter value which is not avilable in option then this method will be
+                 * called
+                 */
                 default:
+                    System.out.println("You need to choose Right option");
                     break;
                 }
 
@@ -129,32 +182,60 @@ public class Main {
             case 3:
                 System.out.println("\nSelect your Option: ");
                 System.out.println("-----------------------");
-                System.out.println("1. Search Owners");
-                System.out.println("2. Search Accountants");
-                System.out.println("3. Search Administrators");
-                System.out.println("4. Search Workers");
-                System.out.println("6. back");
+                System.out.println("1. Search Owner");
+                System.out.println("2. Search Accountant");
+                System.out.println("3. Search Administrator");
+                System.out.println("4. Search Worker");
+                System.out.println("5. back");
                 System.out.print("\nEnter Option: ");
                 int option3 = input.nextInt();
-                if (option3 == 6) {
+                if (option3 == 5) {
 
                     break;
                 }
                 switch (option3) {
+                /**
+                 * this case find owner details
+                 */
                 case 1:
-                    System.out.print("Enter Name: ");
+                    System.out.print("Enter Owner Name: ");
                     String oName = input.next();
                     raptor.searchOwners(oName);
                     break;
+                /**
+                 * this case find Accountant details
+                 */
                 case 2:
-                    System.out.print("Enter Name: ");
-                    String aName = input.next();
-                    raptor.searchAccountant(aName);
+                    System.out.print("Enter Accountant ID: ");
+                    int aID = input.nextInt();
+                    raptor.searchAccountant(aID);
+                    break;
+                /**
+                 * this case find administrator details
+                 */
+                case 3:
+                    System.out.print("Enter Administarator ID: ");
+                    int adID = input.nextInt();
+                    raptor.searchAdmintrator(adID);
+                    break;
+                /**
+                 * this case find worker details
+                 */
+                case 4:
+                    System.out.print("Enter Worker ID: ");
+                    int wID = input.nextInt();
+                    raptor.searchWorkers(wID);
                     break;
                 default:
                     break;
                 }
                 break;
+
+            case 4:
+                break;
+            /**
+             * this section is product management section
+             */
             case 6:
                 break;
             default:
