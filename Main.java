@@ -120,7 +120,31 @@ public class Main {
                 }
 
                 break;
+            case 3:
+                System.out.println("\nSelect your Option: ");
+                System.out.println("-----------------------");
+                System.out.println("1. Search Owners");
+                System.out.println("2. Search Accountants");
+                System.out.println("3. Search Administrators");
+                System.out.println("4. Search Workers");
+                System.out.println("6. back");
+                System.out.print("\nEnter Option: ");
+                int option3 = input.nextInt();
+                if (option3 == 6) {
 
+                    break;
+                }
+                switch (option3) {
+                case 1:
+                    System.out.print("Enter Name: ");
+                    int oName = input.nextInt();
+                    raptor.searchOwners(oName);
+                    break;
+
+                default:
+                    break;
+                }
+                break;
             default:
                 System.out.println("You need to choose Right option");
                 break;

@@ -114,4 +114,23 @@ public class SuperShop {
         }
     }
 
+    public void searchOwners(int Name) {
+        try {
+
+            for (int i = 0; i < getOwners().size(); i++) {
+                if (getOwners().get(i).getAge() == Name) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          Find Owner Details            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getOwners().get(i).displayOwners();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
 }
