@@ -17,6 +17,14 @@ public class Main {
 
         SuperShop raptor = new SuperShop("Raptor", "khagan, Ashulia, Savar", "01773393608");
 
+        Owner o1 = new Owner("Rabbi Hasan", 40, "Male", 40.50);
+        Owner o2 = new Owner("Pabel", 40, "Male", 29.9);
+        Owner o3 = new Owner("Rubel", 41, "Male", 29.6);
+
+        raptor.addOwner(o1);
+        raptor.addOwner(o2);
+        raptor.addOwner(o3);
+
         Worker w = new Worker("Jahid Hasan", 20, "Male", 201, FORMAL, "010000000", 200.30, "day", 8);
         Worker w1 = new Worker("Hasib", 20, "Male", 202, FORMAL, "0100000001", 200.30, "day", 8);
         Worker w2 = new Worker("nirob", 20, "Male", 203, FORMAL, "0100000002", 200.30, "day", 8);
@@ -24,12 +32,12 @@ public class Main {
         Worker w4 = new Worker("likhn", 20, "Male", 205, FORMAL, "0100000004", 200.30, "day", 8);
         Worker w5 = new Worker("badol", 20, "Male", 206, FORMAL, "0100000005", 200.30, "day", 8);
 
-        raptor.addWorkers(w);
-        raptor.addWorkers(w1);
-        raptor.addWorkers(w2);
-        raptor.addWorkers(w3);
-        raptor.addWorkers(w4);
-        raptor.addWorkers(w5);
+        raptor.addWorker(w);
+        raptor.addWorker(w1);
+        raptor.addWorker(w2);
+        raptor.addWorker(w3);
+        raptor.addWorker(w4);
+        raptor.addWorker(w5);
 
         Accountant a = new Accountant("Sajib", 30, "Male", 301, FORMAL, "01349384038", COMMERCE, BSCCO, 400.20, "day",
                 8);
@@ -38,9 +46,9 @@ public class Main {
         Accountant a3 = new Accountant("rafa", 30, "Male", 303, FORMAL, "0134938408", COMMERCE, BSCCO, 400.20, "day",
                 8);
 
-        raptor.addAccountants(a);
-        raptor.addAccountants(a2);
-        raptor.addAccountants(a3);
+        raptor.addAccountant(a);
+        raptor.addAccountant(a2);
+        raptor.addAccountant(a3);
 
         Administrator ad = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE", "MSc in CSE",
                 460.3, "day", 12);
@@ -51,10 +59,10 @@ public class Main {
         Administrator ad4 = new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12);
 
-        raptor.addAdministrators(ad);
-        raptor.addAdministrators(ad2);
-        raptor.addAdministrators(ad3);
-        raptor.addAdministrators(ad4);
+        raptor.addAdministrator(ad);
+        raptor.addAdministrator(ad2);
+        raptor.addAdministrator(ad3);
+        raptor.addAdministrator(ad4);
 
         Scanner input = new Scanner(System.in);
 
@@ -94,7 +102,7 @@ public class Main {
                 }
                 switch (option2) {
                 case 1:
-
+                    raptor.printAllOwners();
                     break;
                 case 2:
                     raptor.printAllAccountants();

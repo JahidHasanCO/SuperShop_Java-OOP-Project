@@ -7,6 +7,7 @@ public class SuperShop {
     private String shopPlace;
     private String contract;
 
+    private List<Owner> owners;
     private List<Administrator> administrators;
     private List<Accountant> accountants;
     private List<Worker> workers;
@@ -18,13 +19,14 @@ public class SuperShop {
         administrators = new ArrayList<>();
         workers = new ArrayList<>();
         accountants = new ArrayList<>();
+        owners = new ArrayList<>();
     }
 
     public List<Administrator> getAdministrators() {
         return administrators;
     }
 
-    public void addAdministrators(Administrator administrator) {
+    public void addAdministrator(Administrator administrator) {
         administrators.add(administrator);
     }
 
@@ -32,7 +34,7 @@ public class SuperShop {
         return workers;
     }
 
-    public void addWorkers(Worker worker) {
+    public void addWorker(Worker worker) {
         workers.add(worker);
     }
 
@@ -43,16 +45,8 @@ public class SuperShop {
                 System.out.println("\n------------------------------------");
                 System.out.println("            Administrators Details             ");
                 System.out.println("--------------------------------------\n");
-                System.out.println("Name: " + getAdministrators().get(i).getName());
-                System.out.println("ID: " + getAdministrators().get(i).getId());
-                System.out.println("Age: " + getAdministrators().get(i).getAge());
-                System.out.println("Gender: " + getAdministrators().get(i).getGender());
-                System.out.println("Qualifications: " + getAdministrators().get(i).getQualification());
-                System.out.println("Department: " + getAdministrators().get(i).getDepartment());
-                System.out.println("Phone Number" + getAdministrators().get(i).getPhoneNumber());
-                System.out.println("Salary: $" + getAdministrators().get(i).getSalary());
-                System.out.println("Work Hour: " + getAdministrators().get(i).getWorkHour());
 
+                getAdministrators().get(i).displayAdministrator();
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -67,15 +61,8 @@ public class SuperShop {
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Worker Details             ");
                 System.out.println("-------------------------------------\n");
-                System.out.println("Name: " + getWorkers().get(i).getName());
-                System.out.println("ID: " + getWorkers().get(i).getId());
-                System.out.println("Age: " + getWorkers().get(i).getAge());
-                System.out.println("Gender: " + getWorkers().get(i).getGender());
-                System.out.println("Phone Number" + getWorkers().get(i).getPhoneNumber());
-                System.out.println("Salary: $" + getWorkers().get(i).getSalary());
-                System.out.println("Work Hour: " + getWorkers().get(i).getWorkHour());
-                System.out.println("Shift: " + getWorkers().get(i).getDutyShift());
-                System.out.println("DressCode: " + getWorkers().get(i).getDressCode());
+
+                getWorkers().get(i).displayWorkers();
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -86,7 +73,7 @@ public class SuperShop {
         return accountants;
     }
 
-    public void addAccountants(Accountant accountant) {
+    public void addAccountant(Accountant accountant) {
         accountants.add(accountant);
     }
 
@@ -97,16 +84,30 @@ public class SuperShop {
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Accountants Details             ");
                 System.out.println("-------------------------------------\n");
-                System.out.println("Name: " + getAccountants().get(i).getName());
-                System.out.println("ID: " + getAccountants().get(i).getId());
-                System.out.println("Age: " + getAccountants().get(i).getAge());
-                System.out.println("Gender: " + getAccountants().get(i).getGender());
-                System.out.println("Qualifications: " + getAccountants().get(i).getQualification());
-                System.out.println("Department: " + getAccountants().get(i).getDepartment());
-                System.out.println("Phone Number" + getAccountants().get(i).getPhoneNumber());
-                System.out.println("Salary: $" + getAccountants().get(i).getSalary());
-                System.out.println("Work Hour: " + getAccountants().get(i).getWorkHour());
 
+                getAccountants().get(i).displayAccountant();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public List<Owner> getOwners() {
+        return owners;
+    }
+
+    public void addOwner(Owner owner) {
+        owners.add(owner);
+    }
+
+    public void printAllOwners() {
+        try {
+            for (int i = 0; i < owners.size(); i++) {
+                System.out.println("\n-------------------------------------");
+                System.out.println("            Owners Details             ");
+                System.out.println("-------------------------------------\n");
+
+                getOwners().get(i).displayOwners();
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

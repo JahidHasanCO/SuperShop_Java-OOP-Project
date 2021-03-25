@@ -36,4 +36,17 @@ public class Administrator extends Manager {
         WorkHour = workHour;
     }
 
+    public void displayAdministrator() {
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Id: " + getId());
+        System.out.println("DressCode: " + getDressCode());
+        System.out.println("Phone Number: " + getPhoneNumber());
+        System.out.println("Department: " + getDepartment());
+        System.out.println("Qualification: " + getQualification());
+        System.out.println("Salary: $" + getSalary());
+        System.out.println("Day Shift: " + getDayShift());
+        System.out.println("Work Hour: " + getWorkHour());
+    }
 }

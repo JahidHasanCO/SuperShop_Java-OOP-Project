@@ -36,4 +36,15 @@ public class Worker extends Employee {
         WorkHour = workHour;
     }
 
+    public void displayWorkers() {
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Id: " + getId());
+        System.out.println("DressCode: " + getDressCode());
+        System.out.println("Phone Number: " + getPhoneNumber());
+        System.out.println("Salary: $" + getSalary());
+        System.out.println("Day Shift: " + getDutyShift());
+        System.out.println("Work Hour: " + getWorkHour());
+    }
 }

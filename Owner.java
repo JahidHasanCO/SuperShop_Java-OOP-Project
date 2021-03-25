@@ -15,4 +15,11 @@ public class Owner extends Person {
         this.share = share;
     }
 
+    public void displayOwners() {
+        System.out.println("Name: " + super.getName());
+        System.out.println("Age: " + super.getAge());
+        System.out.println("Gender: " + super.getGender());
+        System.out.println("Share in Business: " + getShare() + "%");
+    }
+
 }
