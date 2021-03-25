@@ -1,3 +1,5 @@
+package ModelClass;
+
 public class Person {
 
     private String name;

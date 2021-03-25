@@ -1,3 +1,5 @@
+import ModelClass.Manager;
+
 public class Accountant extends Manager {
 
     private double Salary;

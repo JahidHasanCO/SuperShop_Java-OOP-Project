@@ -1,3 +1,5 @@
+import ModelClass.Employee;
+
 public class Worker extends Employee {
 
     private double Salary;

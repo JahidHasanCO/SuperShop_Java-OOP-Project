@@ -1,3 +1,5 @@
+import ModelClass.Person;
+
 public class Owner extends Person {
 
     private double share;

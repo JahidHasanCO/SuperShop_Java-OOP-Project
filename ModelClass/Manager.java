@@ -1,3 +1,5 @@
+package ModelClass;
+
 public class Manager extends Employee {
 
     private String Department;
