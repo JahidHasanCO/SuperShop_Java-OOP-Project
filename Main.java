@@ -13,6 +13,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /**
+         * I created a object of super shop called raptor
+         */
         SuperShop raptor = new SuperShop("Raptor", "khagan, Ashulia, Savar", "01773393608");
 
         Owner o1 = new Owner("Rabbi Hasan", 40, "Male", 40.50);
