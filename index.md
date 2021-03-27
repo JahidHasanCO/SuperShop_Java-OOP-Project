@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+# SuperShop Management Tool
 
-You can use the [editor on GitHub](https://github.com/JibbleEinuxCODE/SuperShop_Java-OOP-Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Java oop Project
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://www.facebook.com/JahidHasan.CO)
 
-### Markdown
+SuperShop management system is a common project for our daily
+bassis problem. So in this project I create e simple project. But i think it will be help
+shop management system easily.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Features
 
-```markdown
-Syntax highlighted code block
+- Add (Workers, Accountant, Administrator, Owner)
+- Print (Workers, Accountant, Administrator, Owner)
+- Search (Workers, Accountant, Administrator, Owner)
+- Delete (Workers, Accountant, Administrator, Owner)
+- Product Management
 
-# Header 1
-## Header 2
-### Header 3
+> In this product Management Section We can
+> Add product,
+> Print All products,
+> Print products by Category,
+> Search Product,
+> Delete Product
 
-- Bulleted
-- List
+**In this project We use Array List bt Don't Store Database in a File So, If We are Add or Delete data this is be Toemporary Add Or Delete**
 
-1. Numbered
-2. List
+# Main
 
-**Bold** and _Italic_ and `Code` text
+![Lopo](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/logo.png)
 
-[Link](url) and ![Image](src)
+## This is Our Main Section. In this Section We see logo and some feaures.
+
+- This is our main section.
+- Add
+- Print
+- Search
+- Delete
+- Product Management
+- Exit
+
+# This is Our Add section
+
+![Add Section](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/add%20section.png)
+
+## this is our add section . In this section we can.
+
+- Add Accountants
+- Add Administrators
+- Add Workers
+- Back
+
+## Add Accountants
+
+![Add Accoutant](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/add%20Accountant.png)
+
+> In this Section we Add Accountant
+
+# This is Print Section
+
+![Add Accoutant](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/print%20section.png)
+
+## In this section we will
+
+- Print Owners
+- Print Accountants
+- Print Administrators
+- Print Workers
+- Back
+
+## Print Accontant Details
+
+![Add Accoutant](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/print%20accountant%20details.png)
+
+> In this section we print Accountant details.
+
+# Search Section
+
+![Add Accoutant](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/search%20accountant.png)
+
+## This is Search section. In this section We Can:
+
+- Search Owners
+- Search Accountant
+- Search Administrator
+- Search Worker
+- Back
+
+# Product Management
+
+![Add Accoutant](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/product%20management.png)
+
+## this is our Poduct Management section. In this section We can
+
+- Add Product
+- Print All Product
+- Print Product By Category
+- Search Product
+- Delete Product
+- Back
+
+```sh
+This is SuperShop Management Tool I think this will be help to Manage Shop
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JibbleEinuxCODE/SuperShop_Java-OOP-Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
