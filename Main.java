@@ -72,6 +72,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
+        logo();
         while (true) {
 
             System.out.println("\nSelect your Option: ");
@@ -455,6 +456,22 @@ public class Main {
             }
 
         }
+
+    }
+
+    private static void logo() {
+
+        System.out.println("  _____                       _____ _                    ");
+        System.out.println(" / ____|                     / ____| |                 ");
+        System.out.println("| (___  _   _ _ __   ___ _ _| (___ | |__   ___  _ __   ");
+        System.out.println(" \\___ \\| | | | '_ \\ / _ \\ '__\\___ \\| '_ \\ / _ \\| '_ \\");
+        System.out.println(" ____) | |_| | |_) |  __/ |  ____) | | | | (_) | |_) | ");
+        System.out.println("|_____/ \\__,_| .__/ \\___|_| |_____/|_| |_|\\___/| .__/  ");
+        System.out.println("           | |                               | |       ");
+        System.out.println("           |_|                               |_|       ");
+        System.out.println("------------- SuperShop Management System -------------");
+        System.out.println("-------------------- @JahidHasanCO --------------------");
+        System.out.println("\n");
 
     }
 
