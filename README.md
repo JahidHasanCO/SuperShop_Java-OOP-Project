@@ -32,8 +32,8 @@ shop management system easily.
 ## This is Our Main Section. In this Section We see logo and some feaures.
 
 - This is our main section.
-- Add");
-- Print;
+- Add
+- Print
 - Search
 - Delete
 - Product Management
