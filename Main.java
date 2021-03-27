@@ -50,8 +50,8 @@ public class Main {
                 "MSc in CSE", 460.3, "night", 12));
 
         raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Meat", 100001, 20.3, "Meat"));
+        raptor.addProduct(new Product("fish", 100001, 20.3, "Fish"));
         raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
         raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
         raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
@@ -214,6 +214,9 @@ public class Main {
                     }
                     break;
                 default:
+                    /**
+                     * if user input not match on case then this message will be print
+                     */
                     System.out.println("You need to choose Right option");
                     break;
                 }
@@ -269,6 +272,9 @@ public class Main {
                  * called
                  */
                 default:
+                    /**
+                     * if user input not match on case then this message will be print
+                     */
                     System.out.println("You need to choose Right option");
                     break;
                 }
@@ -327,6 +333,9 @@ public class Main {
                     raptor.searchWorkers(wID);
                     break;
                 default:
+                    /**
+                     * if user input not match on case then this message will be print
+                     */
                     System.out.println("You need to choose Right option");
                     break;
                 }
@@ -365,6 +374,9 @@ public class Main {
                     raptor.deleteWorkers(wIDdel);
                     break;
                 default:
+                    /**
+                     * if user input not match on case then this message will be print
+                     */
                     System.out.println("You need to choose Right option");
                     break;
                 }
@@ -421,16 +433,23 @@ public class Main {
                     raptor.searchProducts(pName);
                     break;
                 case 5:
+
                     System.out.print("\nEnter Product ID: ");
                     int pIddel = input.nextInt();
                     raptor.deleteProduct(pIddel);
                     break;
                 default:
+                    /**
+                     * if user input not match on case then this message will be print
+                     */
                     System.out.println("You need to choose Right option");
                     break;
                 }
                 break;
             default:
+                /**
+                 * if user input not match on case then this message will be print
+                 */
                 System.out.println("You need to choose Right option");
                 break;
             }

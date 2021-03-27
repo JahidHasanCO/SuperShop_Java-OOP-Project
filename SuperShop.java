@@ -10,8 +10,14 @@ public class SuperShop {
     private String shopPlace;
     private String contract;
 
+    /**
+     * create scanner object for user input
+     */
     Scanner input = new Scanner(System.in);
 
+    /**
+     * create array list of Owner, Adminisrator, Accountant, Worker and product
+     */
     private List<Owner> owners;
     private List<Administrator> administrators;
     private List<Accountant> accountants;
@@ -19,6 +25,13 @@ public class SuperShop {
 
     private List<Product> products;
 
+    /**
+     * Create param constractor
+     * 
+     * @param shopName
+     * @param shopPlace
+     * @param contract
+     */
     public SuperShop(String shopName, String shopPlace, String contract) {
         this.shopName = shopName;
         this.shopPlace = shopPlace;
@@ -30,22 +43,41 @@ public class SuperShop {
         products = new ArrayList<>();
     }
 
+    /**
+     * this is getter method of Administrator
+     * 
+     * @return
+     */
     public List<Administrator> getAdministrators() {
         return administrators;
     }
 
+    /**
+     * this is add administrator method
+     */
     public void addAdministrator(Administrator administrator) {
         administrators.add(administrator);
     }
 
+    /**
+     * this is getter method of worker
+     */
     public List<Worker> getWorkers() {
         return workers;
     }
 
+    /**
+     * this is add method of worker
+     * 
+     * @param worker
+     */
     public void addWorker(Worker worker) {
         workers.add(worker);
     }
 
+    /**
+     * this method will print all administrator list
+     */
     public void printAllAdministrators() {
         try {
 
@@ -61,6 +93,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will search administrator and print
+     * 
+     * @param ID
+     */
     public void searchAdmintrator(int ID) {
         try {
 
@@ -80,6 +117,11 @@ public class SuperShop {
 
     }
 
+    /**
+     * this method will delete administrator
+     * 
+     * @param ID
+     */
     public void deleteAdmintrator(int ID) {
         try {
 
@@ -107,6 +149,9 @@ public class SuperShop {
 
     }
 
+    /**
+     * this method will print all worker list
+     */
     public void printAllWorkers() {
 
         try {
@@ -123,6 +168,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will search worker
+     * 
+     * @param ID
+     */
     public void searchWorkers(int ID) {
         try {
 
@@ -142,6 +192,11 @@ public class SuperShop {
 
     }
 
+    /**
+     * this method will delete worker record
+     * 
+     * @param ID
+     */
     public void deleteWorkers(int ID) {
         try {
 
@@ -168,14 +223,27 @@ public class SuperShop {
 
     }
 
+    /**
+     * this is getter method of accountant
+     * 
+     * @return
+     */
     public List<Accountant> getAccountants() {
         return accountants;
     }
 
+    /**
+     * this is add accountant method
+     * 
+     * @param accountant
+     */
     public void addAccountant(Accountant accountant) {
         accountants.add(accountant);
     }
 
+    /**
+     * this method will print all accountant list
+     */
     public void printAllAccountants() {
         try {
 
@@ -191,6 +259,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will search and print accountant
+     * 
+     * @param ID
+     */
     public void searchAccountant(int ID) {
         try {
 
@@ -210,6 +283,11 @@ public class SuperShop {
 
     }
 
+    /**
+     * this method will delete accountant
+     * 
+     * @param ID
+     */
     public void deleteAccountant(int ID) {
         try {
 
@@ -236,14 +314,27 @@ public class SuperShop {
 
     }
 
+    /**
+     * this is getter method of owner
+     * 
+     * @return
+     */
     public List<Owner> getOwners() {
         return owners;
     }
 
+    /**
+     * this method will be add owner
+     * 
+     * @param owner
+     */
     public void addOwner(Owner owner) {
         owners.add(owner);
     }
 
+    /**
+     * this method will print all owner list
+     */
     public void printAllOwners() {
         try {
             for (int i = 0; i < getOwners().size(); i++) {
@@ -258,6 +349,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will be search owner records
+     * 
+     * @param Name
+     */
     public void searchOwners(String Name) {
         try {
 
@@ -277,14 +373,27 @@ public class SuperShop {
 
     }
 
+    /**
+     * this is getter method of product
+     * 
+     * @return
+     */
     public List<Product> getProducts() {
         return products;
     }
 
+    /**
+     * this method will add product
+     * 
+     * @param product
+     */
     public void addProduct(Product product) {
         products.add(product);
     }
 
+    /**
+     * this method will print all products
+     */
     public void printAllProducts() {
         try {
 
@@ -301,6 +410,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will print products by category
+     * 
+     * @param Category
+     */
     public void printProductsByCategory(String Category) {
         try {
 
@@ -321,6 +435,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will search products
+     * 
+     * @param name
+     */
     public void searchProducts(String name) {
         try {
 
@@ -341,6 +460,11 @@ public class SuperShop {
         }
     }
 
+    /**
+     * this method will delete products
+     * 
+     * @param id
+     */
     public void deleteProduct(int id) {
         try {
 
