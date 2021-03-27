@@ -1,20 +1,26 @@
-<h1 align="center">SuperShop Management Project</h1>
-<h3 align="center">Java OOP Project</h3>
+# SuperShop Management Tool
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=jibbleeinuxcode&label=Profile%20views&color=0e75b6&style=flat" alt="jibbleeinuxcode" /> </p>
+## Java oop Project
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jibbleeinuxcode" alt="jibbleeinuxcode" /></a> </p>
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://www.facebook.com/JahidHasan.CO)
 
-<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
+SuperShop management system is a common project for our daily
+bassis problem. So in this project I create e simple project. But i think it will be help
+shop management system easily.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> </p>
+## Features
 
-<h3 align="left">Support:</h3>
-<p><a href="https://www.buymeacoffee.com/JibbleEinuxCODE"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="JibbleEinuxCODE" /></a></p><br><br>
+- Add (Workers, Accountant, Administrator, Owner)
+- Print (Workers, Accountant, Administrator, Owner)
+- Search (Workers, Accountant, Administrator, Owner)
+- Delete (Workers, Accountant, Administrator, Owner)
+- Product Management
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=jibbleeinuxcode&show_icons=true&locale=en&layout=compact" alt="jibbleeinuxcode" /></p>
+> In this product Management Section We can
+> Add product
+> Print All products
+> Print products by Category
+> Search Product
+> Delete Product
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jibbleeinuxcode&show_icons=true&locale=en" alt="jibbleeinuxcode" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=jibbleeinuxcode&" alt="jibbleeinuxcode" /></p>
+**In this project We use Array List bt Don't Store Database in a File So, If We are Add or Delete data this is be Toemporary Add Or Delete**
