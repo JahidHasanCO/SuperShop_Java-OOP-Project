@@ -321,4 +321,49 @@ public class SuperShop {
         }
     }
 
+    public void searchProducts(String name) {
+        try {
+
+            for (int i = 0; i < getProducts().size(); i++) {
+
+                if (getProducts().get(i).getName().toString().trim().equalsIgnoreCase(name)) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("         Search Product Details            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getProducts().get(i).displayItem();
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+    }
+
+    public void deleteProduct(int id) {
+        try {
+
+            for (int i = 0; i < getProducts().size(); i++) {
+
+                if (getProducts().get(i).getProductId() == id) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("            Delete Product          ");
+                    System.out.println("-------------------------------------\n");
+
+                    getProducts().get(i).displayItem();
+                    System.out.println("Do you delete this Product(y/n)?");
+                    String c = input.next();
+                    if (c.equals("y")) {
+                        getProducts().remove(i);
+                        break;
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+    }
 }

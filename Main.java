@@ -49,7 +49,26 @@ public class Main {
         raptor.addAdministrator(new Administrator("Jahid Hasan", 35, "male", 104, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12));
 
-        Product p = new Product("Oliv", 100001, 20.3, "Oil");
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
+        raptor.addProduct(new Product("Oliv", 100002, 20.3, "Oil"));
 
         Scanner input = new Scanner(System.in);
 
@@ -61,6 +80,7 @@ public class Main {
             System.out.println("2. Print");
             System.out.println("3. Search");
             System.out.println("4. Delete");
+            System.out.println("5. Product Management");
             System.out.println("6. Exit");
             System.out.print("\nEnter Option: ");
 
@@ -95,13 +115,104 @@ public class Main {
                  * phoneNumber, String department, String qualification, double salary, String
                  * dayShift, int workHour)
                  */
-                case 2:
+                case 1:
                     System.out.println("Add New Accountant");
                     System.out.println("-------------------");
+                    System.out.print("\nEnter Accountant Name: ");
+                    String aname = input.next();
+                    System.out.print("Enter Accountant Age: ");
+                    int aage = input.nextInt();
+                    System.out.print("Enter Accountant Gender: ");
+                    String agender = input.next();
+                    System.out.print("Enter Accountant ID: ");
+                    int aid = input.nextInt();
+                    System.out.print("Enter Accountant DressCode: ");
+                    String adressCode = input.next();
+                    System.out.print("Enter Accountant Phone Number: ");
+                    String aphoneNumber = input.next();
+                    System.out.print("Enter Accountant Department: ");
+                    String adepartment = input.next();
+                    System.out.print("Enter Accountant Qualification: ");
+                    String aqualification = input.next();
+                    System.out.print("Enter Accountant Salary: ");
+                    double asalary = input.nextDouble();
+                    System.out.print("Enter Accountant Duty Shift: ");
+                    String adayShift = input.next();
+                    System.out.print("Enter Accountant Work Hour: ");
+                    int aworkHour = input.nextInt();
 
-                    String aNameIN = input.next();
+                    System.out.print("\nDo you add this record(y/n): ");
+                    String cin1 = input.next();
+                    if (cin1.equals("y")) {
+                        raptor.addAccountant(new Accountant(aname, aage, agender, aid, adressCode, aphoneNumber,
+                                adepartment, aqualification, asalary, adayShift, aworkHour));
+                        System.out.print("\nSuccessfully added records.");
+                    }
+
                     break;
+                case 2:
+                    System.out.println("Add New Administrator");
+                    System.out.println("-------------------");
+                    System.out.print("\nEnter Administrator Name: ");
+                    String aaname = input.next();
+                    System.out.print("Enter Administrator Age: ");
+                    int aaage = input.nextInt();
+                    System.out.print("Enter Administrator Gender: ");
+                    String aagender = input.next();
+                    System.out.print("Enter Administrator ID: ");
+                    int aaid = input.nextInt();
+                    System.out.print("Enter Administrator DressCode: ");
+                    String aadressCode = input.next();
+                    System.out.print("Enter Administrator Phone Number: ");
+                    String aaphoneNumber = input.next();
+                    System.out.print("Enter Administrator Department: ");
+                    String aadepartment = input.next();
+                    System.out.print("Enter Administrator Qualification: ");
+                    String aaqualification = input.next();
+                    System.out.print("Enter Administrator Salary: ");
+                    double aasalary = input.nextDouble();
+                    System.out.print("Enter Administrator Duty Shift: ");
+                    String aadayShift = input.next();
+                    System.out.print("Enter Administrator Work Hour: ");
+                    int aaworkHour = input.nextInt();
 
+                    System.out.print("\nDo you add this record(y/n): ");
+                    String cin2 = input.next();
+                    if (cin2.equals("y")) {
+                        raptor.addAdministrator(new Administrator(aaname, aaage, aagender, aaid, aadressCode,
+                                aaphoneNumber, aadepartment, aaqualification, aasalary, aadayShift, aaworkHour));
+                        System.out.print("\nSuccessfully added records.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Add New worker");
+                    System.out.println("-------------------");
+                    System.out.print("\nEnter worker Name: ");
+                    String wname = input.next();
+                    System.out.print("Enter worker Age: ");
+                    int wage = input.nextInt();
+                    System.out.print("Enter worker Gender: ");
+                    String wgender = input.next();
+                    System.out.print("Enter worker ID: ");
+                    int wid = input.nextInt();
+                    System.out.print("Enter worker DressCode: ");
+                    String wdressCode = input.next();
+                    System.out.print("Enter worker Phone Number: ");
+                    String wphoneNumber = input.next();
+                    System.out.print("Enter worker Salary: ");
+                    double wsalary = input.nextDouble();
+                    System.out.print("Enter worker Duty Shift: ");
+                    String wdayShift = input.next();
+                    System.out.print("Enter worker Work Hour: ");
+                    int wworkHour = input.nextInt();
+                    System.out.print("\nDo you add this record(y/n): ");
+                    String cin3 = input.next();
+                    if (cin3.equals("y")) {
+                        raptor.addWorker(new Worker(wname, wage, wgender, wid, wdressCode, wphoneNumber, wsalary,
+                                wdayShift, wworkHour));
+                        System.out.print("\nSuccessfully added records.");
+                    }
+                    break;
                 default:
                     System.out.println("You need to choose Right option");
                     break;
@@ -261,15 +372,63 @@ public class Main {
             /**
              * this section is product management section
              */
-            case 6:
+            case 5:
                 System.out.println("\nSelect your Option: ");
                 System.out.println("-----------------------");
-                System.out.println("1. Print All Products");
-                System.out.println("2. Print Products by Category");
-                System.out.println("3. Print Administrators");
-                System.out.println("4. Print Workers");
-                System.out.println("5. back");
+                System.out.println("1. Add Product");
+                System.out.println("2. Print All Products");
+                System.out.println("3. Print Products by Category");
+                System.out.println("4. Search Products");
+                System.out.println("5. delete product");
+                System.out.println("6. back");
                 System.out.print("\nEnter Option: ");
+
+                int option5 = input.nextInt();
+                if (option5 == 6) {
+                    break;
+                }
+                switch (option5) {
+                case 1:
+                    String pn, pc;
+                    int pi;
+                    double pp;
+                    System.out.print("Enter Product Name: ");
+                    pn = input.next();
+                    System.out.print("Enter Product ID: ");
+                    pi = input.nextInt();
+                    System.out.print("Enter Product Category: ");
+                    pc = input.next();
+                    System.out.print("Enter Product Price: ");
+                    pp = input.nextDouble();
+                    System.out.print("\n\nDo you add product(y/n): ");
+                    String c5 = input.next();
+                    if (c5.equals("y")) {
+                        raptor.addProduct(new Product(pn, pi, pp, pc));
+                        System.out.println("\nSuccessfully Added Product\n");
+                    }
+                    break;
+                case 2:
+                    raptor.printAllProducts();
+                    break;
+                case 3:
+                    System.out.print("\nEnter Category: ");
+                    String Cate = input.next();
+                    raptor.printProductsByCategory(Cate);
+                    break;
+                case 4:
+                    System.out.print("\nEnter Product name: ");
+                    String pName = input.next();
+                    raptor.searchProducts(pName);
+                    break;
+                case 5:
+                    System.out.print("\nEnter Product ID: ");
+                    int pIddel = input.nextInt();
+                    raptor.deleteProduct(pIddel);
+                    break;
+                default:
+                    System.out.println("You need to choose Right option");
+                    break;
+                }
                 break;
             default:
                 System.out.println("You need to choose Right option");
