@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import ModelClass.Product;
 
@@ -8,6 +9,8 @@ public class SuperShop {
     private String shopName;
     private String shopPlace;
     private String contract;
+
+    Scanner input = new Scanner(System.in);
 
     private List<Owner> owners;
     private List<Administrator> administrators;
@@ -77,6 +80,33 @@ public class SuperShop {
 
     }
 
+    public void deleteAdmintrator(int ID) {
+        try {
+
+            for (int i = 0; i < getAdministrators().size(); i++) {
+                if (getAdministrators().get(i).getId() == ID) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("        Delete Admintrator            ");
+                    System.out.println("-------------------------------------\n");
+                    getAdministrators().get(i).displayAdministrator();
+
+                    System.out.println("Do you delete this records(y/n)?");
+                    String c = input.next();
+                    if (c.equals("y")) {
+                        getAdministrators().remove(i);
+                        break;
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
+    }
+
     public void printAllWorkers() {
 
         try {
@@ -104,6 +134,32 @@ public class SuperShop {
                     System.out.println("-------------------------------------\n");
 
                     getWorkers().get(i).displayWorkers();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
+    }
+
+    public void deleteWorkers(int ID) {
+        try {
+
+            for (int i = 0; i < getWorkers().size(); i++) {
+                if (getWorkers().get(i).getId() == ID) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          Delete Workers           ");
+                    System.out.println("-------------------------------------\n");
+
+                    getWorkers().get(i).displayWorkers();
+
+                    System.out.println("Do you delete this records(y/n)?");
+                    String c = input.next();
+                    if (c.equals("y")) {
+                        getWorkers().remove(i);
+                        break;
+                    }
                 }
             }
         } catch (Exception e) {
@@ -146,6 +202,32 @@ public class SuperShop {
                     System.out.println("-------------------------------------\n");
 
                     getAccountants().get(i).displayAccountant();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage().toString());
+        }
+
+    }
+
+    public void deleteAccountant(int ID) {
+        try {
+
+            for (int i = 0; i < getAccountants().size(); i++) {
+                if (getAccountants().get(i).getId() == ID) {
+
+                    System.out.println("\n-------------------------------------");
+                    System.out.println("          delete Accountant            ");
+                    System.out.println("-------------------------------------\n");
+
+                    getAccountants().get(i).displayAccountant();
+
+                    System.out.println("Do you delete this records(y/n)?");
+                    String c = input.next();
+                    if (c.equals("y")) {
+                        getAccountants().remove(i);
+                        break;
+                    }
                 }
             }
         } catch (Exception e) {
