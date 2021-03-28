@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://www.facebook.com/JahidHasan.CO)
 
 SuperShop management system is a common project for our daily
-bassis problem. So in this project I create e simple project. But i think it will be help
+basis problem. So in this project I create e simple project. But i think it will be help
 shop management system easily.
 
 ## Features
@@ -23,13 +23,13 @@ shop management system easily.
 > Search Product,
 > Delete Product
 
-**In this project We use Array List bt Don't Store Database in a File So, If We are Add or Delete data this is be Toemporary Add Or Delete**
+**In this project We use Array List bt Don't Store Database in a File So, If We are Add or Delete data this is be Temporary Add Or Delete**
 
 # Main
 
 ![Lopo](https://github.com/JahidHasanCO/SuperShop_Java-OOP-Project/blob/main/Images/logo.png)
 
-## This is Our Main Section. In this Section We see logo and some feaures.
+## This is Our Main Section. In this Section We see logo and some features.
 
 - This is our main section.
 - Add

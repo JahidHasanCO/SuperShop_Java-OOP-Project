@@ -23,30 +23,35 @@ public class Main {
          */
 
         raptor.addOwner(new Owner("Rabbi Hasan", 40, "Male", 40.50));
-        raptor.addOwner(new Owner("Pabel", 40, "Male", 29.9));
-        raptor.addOwner(new Owner("Rubel", 41, "Male", 29.6));
+        raptor.addOwner(new Owner("Pabel Kumar", 55, "Male", 29.9));
+        raptor.addOwner(new Owner("Md Rubel Mia", 41, "Male", 29.6));
 
-        raptor.addWorker(new Worker("Jahid Hasan", 20, "Male", 201, FORMAL, "010000000", 200.30, "day", 8));
-        raptor.addWorker(new Worker("Hasib", 20, "Male", 202, FORMAL, "0100000001", 200.30, "day", 8));
-        raptor.addWorker(new Worker("nirob", 20, "Male", 203, FORMAL, "0100000002", 200.30, "day", 8));
-        raptor.addWorker(new Worker("payel", 20, "Female", 204, FORMAL, "0100000003", 200.30, "day", 8));
-        raptor.addWorker(new Worker("likhn", 20, "Male", 205, FORMAL, "0100000004", 200.30, "day", 8));
-        raptor.addWorker(new Worker("badol", 20, "Male", 206, FORMAL, "0100000005", 200.30, "day", 8));
+        /**
+         * In this part i call add Worker Method from SuperShop class then i pass in
+         * this method a Worker class object Thats mean I added worker in Workers Array
+         * List
+         */
+        raptor.addWorker(new Worker("Jahid Hasan", 20, "Male", 201, FORMAL, "010000000", 200.30, "Day", 8));
+        raptor.addWorker(new Worker("Hasibur Rahman", 20, "Male", 202, FORMAL, "0100000001", 200.30, "Night", 12));
+        raptor.addWorker(new Worker("Asraful Nirob", 20, "Male", 203, FORMAL, "0100000002", 200.30, "Day", 8));
+        raptor.addWorker(new Worker("Israt Jahan Payel", 20, "Female", 204, FORMAL, "0100000003", 200.30, "Day", 8));
+        raptor.addWorker(new Worker("Nasim Mahmud Likhon", 20, "Male", 205, FORMAL, "0100000004", 200.30, "Night", 12));
+        raptor.addWorker(new Worker("Md Badol Mia", 20, "Male", 206, FORMAL, "0100000005", 200.30, "Day", 8));
 
-        raptor.addAccountant(
-                new Accountant("Sajib", 30, "Male", 301, FORMAL, "01349384038", COMMERCE, BSCCO, 400.20, "day", 8));
-        raptor.addAccountant(
-                new Accountant("Halim", 30, "Male", 302, FORMAL, "0134938403", COMMERCE, BSCCO, 400.20, "day", 8));
-        raptor.addAccountant(
-                new Accountant("rafa", 30, "Male", 303, FORMAL, "0134938408", COMMERCE, BSCCO, 400.20, "day", 8));
+        raptor.addAccountant(new Accountant("Sajib Bin Mamun", 30, "Male", 301, FORMAL, "01349384038", COMMERCE, BSCCO,
+                400.20, "day", 8));
+        raptor.addAccountant(new Accountant("Halim Islam", 30, "Male", 302, FORMAL, "0134938403", COMMERCE, BSCCO,
+                400.20, "day", 8));
+        raptor.addAccountant(new Accountant("Arafat Islam", 30, "Male", 303, FORMAL, "0134938408", COMMERCE, BSCCO,
+                400.20, "day", 8));
 
         raptor.addAdministrator(new Administrator("Jahid Hasan", 35, "male", 101, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "day", 12));
-        raptor.addAdministrator(new Administrator("Jahid Hasan", 35, "male", 102, FORMAL, "01644334343", "CSE",
+        raptor.addAdministrator(new Administrator("Sajedul Islam", 35, "male", 102, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "day", 12));
-        raptor.addAdministrator(new Administrator("Jahid Hasan", 35, "male", 103, FORMAL, "01644334343", "CSE",
+        raptor.addAdministrator(new Administrator("Pabel Islam", 35, "male", 103, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12));
-        raptor.addAdministrator(new Administrator("Jahid Hasan", 35, "male", 104, FORMAL, "01644334343", "CSE",
+        raptor.addAdministrator(new Administrator("Sovaj Rana", 35, "male", 104, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12));
 
         raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
@@ -72,7 +77,8 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        logo();
+        logo(); // calling logo method
+
         while (true) {
 
             System.out.println("\nSelect your Option: ");
@@ -415,29 +421,34 @@ public class Main {
                     pp = input.nextDouble();
                     System.out.print("\n\nDo you add product(y/n): ");
                     String c5 = input.next();
+                    /**
+                     * if user enter y thats mean user want to add product then this condition will
+                     * be called
+                     */
                     if (c5.equals("y")) {
                         raptor.addProduct(new Product(pn, pi, pp, pc));
                         System.out.println("\nSuccessfully Added Product\n");
                     }
                     break;
                 case 2:
-                    raptor.printAllProducts();
+                    raptor.printAllProducts(); // this method will be print all product list
                     break;
                 case 3:
                     System.out.print("\nEnter Category: ");
-                    String Cate = input.next();
-                    raptor.printProductsByCategory(Cate);
+                    String Cate = input.next(); // Store category
+                    raptor.printProductsByCategory(Cate); // calling this method for search product by category and
+                                                          // print them
                     break;
                 case 4:
                     System.out.print("\nEnter Product name: ");
-                    String pName = input.next();
-                    raptor.searchProducts(pName);
+                    String pName = input.next(); // Store Product Name
+                    raptor.searchProducts(pName); // calling Search Product and pass product name for search
                     break;
                 case 5:
 
                     System.out.print("\nEnter Product ID: ");
-                    int pIddel = input.nextInt();
-                    raptor.deleteProduct(pIddel);
+                    int pIddel = input.nextInt(); // store Product id
+                    raptor.deleteProduct(pIddel); // calling deleteProduct Method and pass product Id
                     break;
                 default:
                     /**
@@ -459,6 +470,9 @@ public class Main {
 
     }
 
+    /**
+     * In this method i Print just ascii symbol for print logo
+     */
     private static void logo() {
 
         System.out.println("  _____                       _____ _                    ");
