@@ -123,30 +123,31 @@ public class Main {
                  * dayShift, int workHour)
                  */
                 case 1:
+                    input.nextLine();
                     System.out.println("Add New Accountant");
                     System.out.println("-------------------");
                     System.out.print("\nEnter Accountant Name: ");
-                    String aname = input.next();
+                    String aname = input.nextLine();
                     System.out.print("Enter Accountant Age: ");
-                    int aage = input.nextInt();
+                    int aage = Integer.parseInt(input.nextLine());
                     System.out.print("Enter Accountant Gender: ");
-                    String agender = input.next();
+                    String agender = input.nextLine();
                     System.out.print("Enter Accountant ID: ");
-                    int aid = input.nextInt();
+                    int aid = Integer.parseInt(input.nextLine());
                     System.out.print("Enter Accountant DressCode: ");
-                    String adressCode = input.next();
+                    String adressCode = input.nextLine();
                     System.out.print("Enter Accountant Phone Number: ");
-                    String aphoneNumber = input.next();
+                    String aphoneNumber = input.nextLine();
                     System.out.print("Enter Accountant Department: ");
-                    String adepartment = input.next();
+                    String adepartment = input.nextLine();
                     System.out.print("Enter Accountant Qualification: ");
-                    String aqualification = input.next();
+                    String aqualification = input.nextLine();
                     System.out.print("Enter Accountant Salary: ");
-                    double asalary = input.nextDouble();
+                    double asalary = Double.parseDouble(input.nextLine());
                     System.out.print("Enter Accountant Duty Shift: ");
-                    String adayShift = input.next();
+                    String adayShift = input.nextLine();
                     System.out.print("Enter Accountant Work Hour: ");
-                    int aworkHour = input.nextInt();
+                    int aworkHour = Integer.parseInt(input.nextLine());
 
                     System.out.print("\nDo you add this record(y/n): ");
                     String cin1 = input.next();
@@ -158,33 +159,34 @@ public class Main {
 
                     break;
                 case 2:
+                    input.nextLine();
                     System.out.println("Add New Administrator");
                     System.out.println("-------------------");
                     System.out.print("\nEnter Administrator Name: ");
-                    String aaname = input.next();
+                    String aaname = input.nextLine();
                     System.out.print("Enter Administrator Age: ");
-                    int aaage = input.nextInt();
+                    int aaage = Integer.parseInt(input.nextLine());
                     System.out.print("Enter Administrator Gender: ");
-                    String aagender = input.next();
+                    String aagender = input.nextLine();
                     System.out.print("Enter Administrator ID: ");
-                    int aaid = input.nextInt();
+                    int aaid = Integer.parseInt(input.nextLine());
                     System.out.print("Enter Administrator DressCode: ");
-                    String aadressCode = input.next();
+                    String aadressCode = input.nextLine();
                     System.out.print("Enter Administrator Phone Number: ");
-                    String aaphoneNumber = input.next();
+                    String aaphoneNumber = input.nextLine();
                     System.out.print("Enter Administrator Department: ");
-                    String aadepartment = input.next();
+                    String aadepartment = input.nextLine();
                     System.out.print("Enter Administrator Qualification: ");
-                    String aaqualification = input.next();
+                    String aaqualification = input.nextLine();
                     System.out.print("Enter Administrator Salary: ");
-                    double aasalary = input.nextDouble();
+                    double aasalary = Double.parseDouble(input.nextLine());
                     System.out.print("Enter Administrator Duty Shift: ");
-                    String aadayShift = input.next();
+                    String aadayShift = input.nextLine();
                     System.out.print("Enter Administrator Work Hour: ");
-                    int aaworkHour = input.nextInt();
+                    int aaworkHour = Integer.parseInt(input.nextLine());
 
                     System.out.print("\nDo you add this record(y/n): ");
-                    String cin2 = input.next();
+                    String cin2 = input.nextLine();
                     if (cin2.equals("y")) {
                         raptor.addAdministrator(new Administrator(aaname, aaage, aagender, aaid, aadressCode,
                                 aaphoneNumber, aadepartment, aaqualification, aasalary, aadayShift, aaworkHour));
@@ -192,28 +194,29 @@ public class Main {
                     }
                     break;
                 case 3:
+                    input.nextLine();
                     System.out.println("Add New worker");
                     System.out.println("-------------------");
                     System.out.print("\nEnter worker Name: ");
-                    String wname = input.next();
+                    String wname = input.nextLine();
                     System.out.print("Enter worker Age: ");
-                    int wage = input.nextInt();
+                    int wage = Integer.parseInt(input.nextLine());
                     System.out.print("Enter worker Gender: ");
-                    String wgender = input.next();
+                    String wgender = input.nextLine();
                     System.out.print("Enter worker ID: ");
-                    int wid = input.nextInt();
+                    int wid = Integer.parseInt(input.nextLine());
                     System.out.print("Enter worker DressCode: ");
-                    String wdressCode = input.next();
+                    String wdressCode = input.nextLine();
                     System.out.print("Enter worker Phone Number: ");
-                    String wphoneNumber = input.next();
+                    String wphoneNumber = input.nextLine();
                     System.out.print("Enter worker Salary: ");
-                    double wsalary = input.nextDouble();
+                    double wsalary = Double.parseDouble(input.nextLine());
                     System.out.print("Enter worker Duty Shift: ");
-                    String wdayShift = input.next();
+                    String wdayShift = input.nextLine();
                     System.out.print("Enter worker Work Hour: ");
-                    int wworkHour = input.nextInt();
+                    int wworkHour = Integer.parseInt(input.nextLine());
                     System.out.print("\nDo you add this record(y/n): ");
-                    String cin3 = input.next();
+                    String cin3 = input.nextLine();
                     if (cin3.equals("y")) {
                         raptor.addWorker(new Worker(wname, wage, wgender, wid, wdressCode, wphoneNumber, wsalary,
                                 wdayShift, wworkHour));
@@ -408,41 +411,19 @@ public class Main {
                 }
                 switch (option5) {
                 case 1:
-                    String pn, pc;
-                    int pi;
-                    double pp;
-                    System.out.print("Enter Product Name: ");
-                    pn = input.next();
-                    System.out.print("Enter Product ID: ");
-                    pi = input.nextInt();
-                    System.out.print("Enter Product Category: ");
-                    pc = input.next();
-                    System.out.print("Enter Product Price: ");
-                    pp = input.nextDouble();
-                    System.out.print("\n\nDo you add product(y/n): ");
-                    String c5 = input.next();
-                    /**
-                     * if user enter y thats mean user want to add product then this condition will
-                     * be called
-                     */
-                    if (c5.equals("y")) {
-                        raptor.addProduct(new Product(pn, pi, pp, pc));
-                        System.out.println("\nSuccessfully Added Product\n");
-                    }
+                    raptor.addProduct();
                     break;
                 case 2:
                     raptor.printAllProducts(); // this method will be print all product list
                     break;
                 case 3:
-                    System.out.print("\nEnter Category: ");
-                    String Cate = input.next(); // Store category
-                    raptor.printProductsByCategory(Cate); // calling this method for search product by category and
-                                                          // print them
+
+                    raptor.printProductsByCategory(); // calling this method for search product by category and // print
+                                                      // them
                     break;
                 case 4:
-                    System.out.print("\nEnter Product name: ");
-                    String pName = input.next(); // Store Product Name
-                    raptor.searchProducts(pName); // calling Search Product and pass product name for search
+
+                    raptor.searchProducts(); // calling Search Product for search
                     break;
                 case 5:
 

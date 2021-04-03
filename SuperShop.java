@@ -415,12 +415,14 @@ public class SuperShop {
      * 
      * @param Category
      */
-    public void printProductsByCategory(String Category) {
+    public void printProductsByCategory() {
+        System.out.print("\nEnter Category: ");
+        String Cate = input.nextLine(); // Store category
         try {
 
             for (int i = 0; i < getProducts().size(); i++) {
 
-                if (getProducts().get(i).getCategory().toString().trim().equalsIgnoreCase(Category)) {
+                if (getProducts().get(i).getCategory().toString().trim().equalsIgnoreCase(Cate)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Product Details            ");
@@ -440,12 +442,14 @@ public class SuperShop {
      * 
      * @param name
      */
-    public void searchProducts(String name) {
+    public void searchProducts() {
+        System.out.print("\nEnter Product name: ");
+        String pName = input.nextLine();
         try {
 
             for (int i = 0; i < getProducts().size(); i++) {
 
-                if (getProducts().get(i).getName().toString().trim().equalsIgnoreCase(name)) {
+                if (getProducts().get(i).getName().toString().trim().equalsIgnoreCase(pName)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("         Search Product Details            ");
@@ -488,6 +492,30 @@ public class SuperShop {
 
         } catch (Exception e) {
             System.out.println(e.getMessage().toString());
+        }
+    }
+
+    public void addProduct() {
+        String pn, pc;
+        int pi;
+        double pp;
+        System.out.print("Enter Product Name: ");
+        pn = input.nextLine();
+        System.out.print("Enter Product ID: ");
+        pi = Integer.parseInt(input.nextLine());
+        System.out.print("Enter Product Category: ");
+        pc = input.nextLine();
+        System.out.print("Enter Product Price: ");
+        pp = Double.parseDouble(input.nextLine());
+        System.out.print("\n\nDo you add product(y/n): ");
+        String c5 = input.next();
+        /**
+         * if user enter y thats mean user want to add product then this condition will
+         * be called
+         */
+        if (c5.equals("y")) {
+            addProduct(new Product(pn, pi, pp, pc));
+            System.out.println("\nSuccessfully Added Product\n");
         }
     }
 }
