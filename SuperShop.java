@@ -6,14 +6,14 @@ import ModelClass.Product;
 
 public class SuperShop {
 
-    private String shopName;
-    private String shopPlace;
-    private String contract;
+    private String shopName; // this variable will be store shop name
+    private String shopPlace; // this variable will be store shop address
+    private String contract; // this variable will be store shop contract number
 
     /**
      * create scanner object for user input
      */
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in); // I created this scanner object for getting value from user
 
     /**
      * create array list of Owner, Adminisrator, Accountant, Worker and product
@@ -36,6 +36,9 @@ public class SuperShop {
         this.shopName = shopName;
         this.shopPlace = shopPlace;
         this.contract = contract;
+        /**
+         * now i initilize all the array list and allocate with memory
+         */
         administrators = new ArrayList<>();
         workers = new ArrayList<>();
         accountants = new ArrayList<>();
@@ -81,14 +84,18 @@ public class SuperShop {
     public void printAllAdministrators() {
         try {
 
-            for (int i = 0; i < getAdministrators().size(); i++) {
+            for (int i = 0; i < getAdministrators().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                   // from 0 to arraylist size.
                 System.out.println("\n------------------------------------");
                 System.out.println("            Administrators Details             ");
                 System.out.println("--------------------------------------\n");
 
-                getAdministrators().get(i).displayAdministrator();
+                getAdministrators().get(i).displayAdministrator(); // i call getter method of administrator and pass
+                                                                   // index in get method and calling
+                                                                   // displayAdministrator method by every index
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
             System.out.println(e.getMessage());
         }
     }
@@ -96,13 +103,16 @@ public class SuperShop {
     /**
      * this method will search administrator and print
      * 
-     * @param ID
+     * @param id
      */
-    public void searchAdmintrator(int ID) {
+    public void searchAdmintrator(int id) {
         try {
 
-            for (int i = 0; i < getAdministrators().size(); i++) {
-                if (getAdministrators().get(i).getId() == ID) {
+            for (int i = 0; i < getAdministrators().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                   // from 0 to arraylist size.
+                if (getAdministrators().get(i).getId() == id) { // this condition will be check addminisrator id and
+                                                                // user input of id match or not... and this condition
+                                                                // will be repeatly calling with loop
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("        Find Admintrator Details         ");
@@ -111,8 +121,9 @@ public class SuperShop {
                     getAdministrators().get(i).displayAdministrator();
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -120,13 +131,14 @@ public class SuperShop {
     /**
      * this method will delete administrator
      * 
-     * @param ID
+     * @param id
      */
-    public void deleteAdmintrator(int ID) {
+    public void deleteAdmintrator(int id) {
         try {
 
-            for (int i = 0; i < getAdministrators().size(); i++) {
-                if (getAdministrators().get(i).getId() == ID) {
+            for (int i = 0; i < getAdministrators().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                   // from 0 to arraylist size.
+                if (getAdministrators().get(i).getId() == id) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("        Delete Admintrator            ");
@@ -143,8 +155,9 @@ public class SuperShop {
                 }
             }
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -156,14 +169,16 @@ public class SuperShop {
 
         try {
 
-            for (int i = 0; i < getWorkers().size(); i++) {
+            for (int i = 0; i < getWorkers().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                            // to arraylist size.
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Worker Details             ");
                 System.out.println("-------------------------------------\n");
 
                 getWorkers().get(i).displayWorkers();
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
             System.out.println(e.getMessage());
         }
     }
@@ -171,13 +186,14 @@ public class SuperShop {
     /**
      * this method will search worker
      * 
-     * @param ID
+     * @param id
      */
-    public void searchWorkers(int ID) {
+    public void searchWorkers(int id) {
         try {
 
-            for (int i = 0; i < getWorkers().size(); i++) {
-                if (getWorkers().get(i).getId() == ID) {
+            for (int i = 0; i < getWorkers().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                            // to arraylist size.
+                if (getWorkers().get(i).getId() == id) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Find Workers Details            ");
@@ -186,8 +202,9 @@ public class SuperShop {
                     getWorkers().get(i).displayWorkers();
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -195,13 +212,14 @@ public class SuperShop {
     /**
      * this method will delete worker record
      * 
-     * @param ID
+     * @param id
      */
-    public void deleteWorkers(int ID) {
+    public void deleteWorkers(int id) {
         try {
 
-            for (int i = 0; i < getWorkers().size(); i++) {
-                if (getWorkers().get(i).getId() == ID) {
+            for (int i = 0; i < getWorkers().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                            // to arraylist size.
+                if (getWorkers().get(i).getId() == id) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Delete Workers           ");
@@ -217,8 +235,9 @@ public class SuperShop {
                     }
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -238,7 +257,8 @@ public class SuperShop {
      * @param accountant
      */
     public void addAccountant(Accountant accountant) {
-        accountants.add(accountant);
+        accountants.add(accountant); // user pass a accountant object when calling this method and we pass this
+                                     // accountant object to our array list by calling add Accountant method
     }
 
     /**
@@ -247,14 +267,16 @@ public class SuperShop {
     public void printAllAccountants() {
         try {
 
-            for (int i = 0; i < getAccountants().size(); i++) {
+            for (int i = 0; i < getAccountants().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                // from 0 to arraylist size.
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Accountants Details             ");
                 System.out.println("-------------------------------------\n");
 
                 getAccountants().get(i).displayAccountant();
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
             System.out.println(e.getMessage());
         }
     }
@@ -262,13 +284,14 @@ public class SuperShop {
     /**
      * this method will search and print accountant
      * 
-     * @param ID
+     * @param id
      */
-    public void searchAccountant(int ID) {
+    public void searchAccountant(int id) {
         try {
 
-            for (int i = 0; i < getAccountants().size(); i++) {
-                if (getAccountants().get(i).getId() == ID) {
+            for (int i = 0; i < getAccountants().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                // from 0 to arraylist size.
+                if (getAccountants().get(i).getId() == id) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Find Accountant Details            ");
@@ -277,8 +300,9 @@ public class SuperShop {
                     getAccountants().get(i).displayAccountant();
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -286,13 +310,14 @@ public class SuperShop {
     /**
      * this method will delete accountant
      * 
-     * @param ID
+     * @param id
      */
-    public void deleteAccountant(int ID) {
+    public void deleteAccountant(int id) {
         try {
 
-            for (int i = 0; i < getAccountants().size(); i++) {
-                if (getAccountants().get(i).getId() == ID) {
+            for (int i = 0; i < getAccountants().size(); i++) { // this loop will be traverse all index of arraylist
+                                                                // from 0 to arraylist size.
+                if (getAccountants().get(i).getId() == id) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          delete Accountant            ");
@@ -308,8 +333,9 @@ public class SuperShop {
                     }
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -337,14 +363,16 @@ public class SuperShop {
      */
     public void printAllOwners() {
         try {
-            for (int i = 0; i < getOwners().size(); i++) {
+            for (int i = 0; i < getOwners().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                           // to arraylist size.
                 System.out.println("\n-------------------------------------");
                 System.out.println("            Owners Details             ");
                 System.out.println("-------------------------------------\n");
 
                 getOwners().get(i).displayOwners();
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
             System.out.println(e.getMessage());
         }
     }
@@ -354,11 +382,12 @@ public class SuperShop {
      * 
      * @param Name
      */
-    public void searchOwners(String Name) {
+    public void searchOwners(String name) {
         try {
 
-            for (int i = 0; i < getOwners().size(); i++) {
-                if (getOwners().get(i).getName().toString().trim().equalsIgnoreCase(Name)) {
+            for (int i = 0; i < getOwners().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                           // to arraylist size.
+                if (getOwners().get(i).getName().trim().equalsIgnoreCase(name)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Find Owner Details            ");
@@ -367,8 +396,9 @@ public class SuperShop {
                     getOwners().get(i).displayOwners();
                 }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
 
     }
@@ -397,7 +427,8 @@ public class SuperShop {
     public void printAllProducts() {
         try {
 
-            for (int i = 0; i < getProducts().size(); i++) {
+            for (int i = 0; i < getProducts().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                             // to arraylist size.
                 System.out.println("\n-------------------------------------");
                 System.out.println("          Product Details            ");
                 System.out.println("-------------------------------------\n");
@@ -405,8 +436,9 @@ public class SuperShop {
                 getProducts().get(i).displayItem();
             }
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
     }
 
@@ -417,12 +449,13 @@ public class SuperShop {
      */
     public void printProductsByCategory() {
         System.out.print("\nEnter Category: ");
-        String Cate = input.nextLine(); // Store category
+        String category = input.nextLine(); // Store category
         try {
 
-            for (int i = 0; i < getProducts().size(); i++) {
+            for (int i = 0; i < getProducts().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                             // to arraylist size.
 
-                if (getProducts().get(i).getCategory().toString().trim().equalsIgnoreCase(Cate)) {
+                if (getProducts().get(i).getCategory().trim().equalsIgnoreCase(category)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("          Product Details            ");
@@ -432,8 +465,9 @@ public class SuperShop {
                 }
             }
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
     }
 
@@ -447,9 +481,10 @@ public class SuperShop {
         String pName = input.nextLine();
         try {
 
-            for (int i = 0; i < getProducts().size(); i++) {
+            for (int i = 0; i < getProducts().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                             // to arraylist size.
 
-                if (getProducts().get(i).getName().toString().trim().equalsIgnoreCase(pName)) {
+                if (getProducts().get(i).getName().trim().equalsIgnoreCase(pName)) {
 
                     System.out.println("\n-------------------------------------");
                     System.out.println("         Search Product Details            ");
@@ -459,8 +494,9 @@ public class SuperShop {
                 }
             }
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
     }
 
@@ -472,7 +508,8 @@ public class SuperShop {
     public void deleteProduct(int id) {
         try {
 
-            for (int i = 0; i < getProducts().size(); i++) {
+            for (int i = 0; i < getProducts().size(); i++) { // this loop will be traverse all index of arraylist from 0
+                                                             // to arraylist size.
 
                 if (getProducts().get(i).getProductId() == id) {
 
@@ -490,32 +527,51 @@ public class SuperShop {
                 }
             }
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage().toString());
+        } catch (Exception e) { // if program failure to get data from arraylist then this section will be
+                                // exicutive
+            System.out.println(e.getMessage());
         }
     }
 
     public void addProduct() {
-        String pn, pc;
+        /**
+         * i created some variables for store product information
+         */
+        String pn;
+        String pc;
         int pi;
         double pp;
+
         System.out.print("Enter Product Name: ");
-        pn = input.nextLine();
+        pn = input.nextLine(); // getting product name from user input and store in pn
         System.out.print("Enter Product ID: ");
-        pi = Integer.parseInt(input.nextLine());
+        pi = Integer.parseInt(input.nextLine()); // getting product ID from user input and store in pi
         System.out.print("Enter Product Category: ");
-        pc = input.nextLine();
+        pc = input.nextLine(); // getting product Category from user input and store in pc
         System.out.print("Enter Product Price: ");
-        pp = Double.parseDouble(input.nextLine());
+        pp = Double.parseDouble(input.nextLine()); // getting product price from user input and store in pp
         System.out.print("\n\nDo you add product(y/n): ");
-        String c5 = input.next();
+        String c5 = input.next(); // i create this variable and this will be get user decision . if user cannot to
+                                  // add product then he/she can cancel this operation by using this input
         /**
          * if user enter y thats mean user want to add product then this condition will
          * be called
          */
-        if (c5.equals("y")) {
-            addProduct(new Product(pn, pi, pp, pc));
+        if (c5.equals("y")) { // if user press y thats means user want to add product then this condition will
+                              // be true
+            addProduct(new Product(pn, pi, pp, pc)); // calling addProduct method and pass a product object
             System.out.println("\nSuccessfully Added Product\n");
         }
+    }
+
+    /**
+     * this method will print details of shop
+     * 
+     */
+    public void displayShop() {
+        /**
+         * print all member variable of shop
+         */
+        System.out.println("\nShop Name: " + shopName + "\nShop Place: " + shopPlace + "\nContract: " + contract);
     }
 }

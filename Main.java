@@ -159,37 +159,54 @@ public class Main {
 
                     break;
                 case 2:
-                    input.nextLine();
+                    input.nextLine(); // i call input object for focus scanner cursor. bt this line didn't get any
+                                      // input
                     System.out.println("Add New Administrator");
                     System.out.println("-------------------");
                     System.out.print("\nEnter Administrator Name: ");
-                    String aaname = input.nextLine();
+                    String aaname = input.nextLine(); // this variable will store administrator name from user input
                     System.out.print("Enter Administrator Age: ");
-                    int aaage = Integer.parseInt(input.nextLine());
+                    int aaage = Integer.parseInt(input.nextLine()); // this variable will store administrator Age from
+                                                                    // user input
                     System.out.print("Enter Administrator Gender: ");
-                    String aagender = input.nextLine();
+                    String aagender = input.nextLine(); // this variable will store administrator Gender from user input
                     System.out.print("Enter Administrator ID: ");
-                    int aaid = Integer.parseInt(input.nextLine());
+                    int aaid = Integer.parseInt(input.nextLine()); // this variable will store administrator ID from
+                                                                   // user input
                     System.out.print("Enter Administrator DressCode: ");
-                    String aadressCode = input.nextLine();
+                    String aadressCode = input.nextLine(); // this variable will store administrator Dress Code from
+                                                           // user
+                                                           // input
                     System.out.print("Enter Administrator Phone Number: ");
-                    String aaphoneNumber = input.nextLine();
+                    String aaphoneNumber = input.nextLine(); // this variable will store administrator Phone Number from
+                                                             // user
+                                                             // input
                     System.out.print("Enter Administrator Department: ");
-                    String aadepartment = input.nextLine();
+                    String aadepartment = input.nextLine(); // this variable will store administrator Department from
+                                                            // user
+                                                            // input
                     System.out.print("Enter Administrator Qualification: ");
-                    String aaqualification = input.nextLine();
+                    String aaqualification = input.nextLine(); // this variable will store administrator Qualification
+                                                               // from user input
                     System.out.print("Enter Administrator Salary: ");
-                    double aasalary = Double.parseDouble(input.nextLine());
+                    double aasalary = Double.parseDouble(input.nextLine()); // this variable will store administrator
+                                                                            // Salary from user input
                     System.out.print("Enter Administrator Duty Shift: ");
-                    String aadayShift = input.nextLine();
+                    String aadayShift = input.nextLine(); // this variable will store administrator Duty Shift from user
+                                                          // input
                     System.out.print("Enter Administrator Work Hour: ");
-                    int aaworkHour = Integer.parseInt(input.nextLine());
+                    int aaworkHour = Integer.parseInt(input.nextLine()); // this variable will store administrator Work
+                                                                         // Hour
+                                                                         // from user input
 
                     System.out.print("\nDo you add this record(y/n): ");
                     String cin2 = input.nextLine();
-                    if (cin2.equals("y")) {
+                    if (cin2.equals("y")) { // if user input y thats means user want to add this record to administrator
+                                            // array list
+                        // I calling add administrator method and pass a administrator object
                         raptor.addAdministrator(new Administrator(aaname, aaage, aagender, aaid, aadressCode,
                                 aaphoneNumber, aadepartment, aaqualification, aasalary, aadayShift, aaworkHour));
+
                         System.out.print("\nSuccessfully added records.");
                     }
                     break;
