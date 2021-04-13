@@ -54,26 +54,31 @@ public class Main {
         raptor.addAdministrator(new Administrator("Sovaj Rana", 35, "male", 104, FORMAL, "01644334343", "CSE",
                 "MSc in CSE", 460.3, "night", 12));
 
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Meat", 100001, 20.3, "Meat"));
-        raptor.addProduct(new Product("fish", 100001, 20.3, "Fish"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100001, 20.3, "Oil"));
-        raptor.addProduct(new Product("Oliv", 100002, 20.3, "Oil"));
+        raptor.addProduct(new Product("Almond Milk: Califia Farms Unsweetened", 100001, 20.3, "DRINKS"));
+        raptor.addProduct(new Product("Apple Juice: Martinelli's 100% Pure", 100001, 20.3, "DRINKS"));
+        raptor.addProduct(new Product("Bloody Mary Mix: McClure's", 100001, 20.3, "DRINKS"));
+        raptor.addProduct(
+                new Product("Kid's Cereal: Kashi by Kids Berry Crumble", 100001, 20.3, "BREAKFAST FAVORITES"));
+        raptor.addProduct(
+                new Product("Bagels: Dave's Killer Bread Plain Awesome", 100001, 20.3, "BREAKFAST FAVORITES"));
+        raptor.addProduct(
+                new Product("Healthy Cereal: Barbara's Peanut Butter Puffins", 100001, 20.3, "BREAKFAST FAVORITES"));
+        raptor.addProduct(new Product("Waffles: Vans Original", 100001, 20.3, "BREAKFAST FAVORITES"));
+        raptor.addProduct(new Product("White Bread: Arnold Country White", 100001, 20.3, "BREAKFAST FAVORITES"));
+        raptor.addProduct(new Product("Alfredo Sauce: Bertolli Organic Creamy Alfredo", 100001, 20.3, "CONDIMENTS"));
+        raptor.addProduct(new Product("Marinara Sauce: Rao's Homemade", 100001, 20.3, "CONDIMENTS"));
+        raptor.addProduct(new Product("Almond Butter: Once Again Creamy Roasted", 100001, 20.3, "CONDIMENTS"));
+        raptor.addProduct(new Product("Balsamic Vinegar: Pompeian Organic Balsamic Vinegar Of Modena", 100001, 20.3,
+                "CONDIMENTS"));
+        raptor.addProduct(new Product("Caesar Dressing: Cardini's Original", 100001, 20.3, "CONDIMENTS"));
+        raptor.addProduct(new Product("Butter: Kerrygold Salted", 100001, 20.3, "DAIRY"));
+        raptor.addProduct(new Product("Cheddar Cheese: Tillamook Sharp", 100001, 20.3, "DAIRY"));
+        raptor.addProduct(new Product("Greek Yogurt: Fage Total 2%", 100001, 20.3, "DAIRY"));
+        raptor.addProduct(new Product("Mozzarella Cheese: BelGioioso Fresh Log", 100001, 20.3, "DAIRY"));
+        raptor.addProduct(new Product("Cauliflower Crust: Cali'Flour Foods The Original Italian", 100001, 20.3,
+                "DINNER FAVORITES"));
+        raptor.addProduct(new Product("Chicken Broth: Pacific Foods Low Sodium", 100001, 20.3, "DINNER FAVORITES"));
+        raptor.addProduct(new Product("Chicken Noodle Soup: Annie's", 100002, 20.3, "DINNER FAVORITES"));
 
         Scanner input = new Scanner(System.in);
 
@@ -83,7 +88,7 @@ public class Main {
 
             System.out.println("\nSelect your Option: ");
             System.out.println("-----------------------");
-            System.out.println("1. Add");
+            System.out.println("1. Add"); // this case is add section.
             System.out.println("2. Print");
             System.out.println("3. Search");
             System.out.println("4. Delete");
